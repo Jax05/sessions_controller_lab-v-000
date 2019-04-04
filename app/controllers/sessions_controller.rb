@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    raise session.inspect
+    raise session[:name].inspect
   end
 
   def create
