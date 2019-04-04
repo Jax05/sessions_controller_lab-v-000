@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    raise params.inspect
     if session[:name].present?
       session[:name] = params[:name]
       redirect_to "/"
