@@ -3,10 +3,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    raise params.inspect
     if session[:name].present?
       session[:name] = params[:name]
-      redirect_to "/"
+      redirect_to root_path
     else
       render :new
     end
